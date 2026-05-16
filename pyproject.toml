@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "topical-proximity"
+version = "0.1.0"
+description = "LLM-based content audit classifier. Replaces cosine similarity with multi-dimensional classification. Supports OpenAI and Anthropic."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Lum Kamishi" }]
+keywords = ["seo", "content-audit", "llm", "classification", "pruning", "anthropic", "openai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+]
+dependencies = [
+    "openai>=1.50",
+    "anthropic>=0.40",
+    "pandas>=2.1",
+    "pyyaml>=6.0",
+    "httpx>=0.27",
+    "trafilatura>=1.12",
+    "tenacity>=8.5",
+]
+
+[project.urls]
+Homepage = "https://lumkamishi.com"
+Repository = "https://github.com/YOUR_USERNAME/topical-proximity"
+Issues = "https://github.com/YOUR_USERNAME/topical-proximity/issues"
+
+[project.scripts]
+topical-proximity = "topical_proximity:main"
+
+[tool.setuptools]
+py-modules = ["topical_proximity"]
