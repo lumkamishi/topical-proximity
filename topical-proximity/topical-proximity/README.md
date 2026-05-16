@@ -39,7 +39,7 @@ The tier column is what you sort by for prune-or-keep decisions. Everything else
 ## Install
 
 ```bash
-git clone https://github.com/lumkamishi/topical-proximity.git
+git clone https://github.com/YOUR_USERNAME/topical-proximity.git
 cd topical-proximity
 pip install -e .
 ```

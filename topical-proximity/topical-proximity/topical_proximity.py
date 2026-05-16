@@ -49,8 +49,8 @@ DEFAULT_CONFIG = {
         "description": "Edit config.yaml to describe what this business does.",
     },
     "classification": {
-        "provider": "anthropic",          # "openai" or "anthropic"
-        "model": "sonnet-4-6",            # provider-appropriate model id
+        "provider": "openai",          # "openai" or "anthropic"
+        "model": "gpt-5.4",            # provider-appropriate model id
         "workers": 8,
         "fetch_content": True,
         "content_max_chars": 4000,

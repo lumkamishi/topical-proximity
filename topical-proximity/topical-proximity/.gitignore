@@ -1,0 +1,37 @@
+# Project outputs
+topical_proximity.csv
+*.partial
+*.bak
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+.venv/
+venv/
+env/
+ENV/
+
+# Environment
+.env
+.env.local
+.envrc
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
