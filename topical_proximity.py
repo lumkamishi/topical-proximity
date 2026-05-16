@@ -50,8 +50,8 @@ DEFAULT_CONFIG = {
     },
     "classification": {
         "provider": "anthropic",          # "openai" or "anthropic"
-        "model": "sonnet-4-6",            # provider-appropriate model id
-        "workers": 8,
+        "model": "claude-sonnet-4-6",            # provider-appropriate model id
+        "workers": 2,
         "fetch_content": True,
         "content_max_chars": 4000,
         "verify_alignment_range": [0.35, 0.65],
@@ -491,7 +491,7 @@ def run(config_path: str = "config.yaml",
     print(f"\nSaved {len(out)} rows to {output_path}")
     print("\nTier breakdown:")
     print(out["tier"].value_counts().to_string())
-    overrides = out["overridden"].fillna(False).sum()
+    overrides = out["overridden"].fillna(False).infer_objects(copy=False).sum()
     if overrides:
         print(f"\nOverridden by verification pass: {overrides}")
     return out
